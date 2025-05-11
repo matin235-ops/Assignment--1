@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/matin235-ops/Assignment--1.git'
+                git branch: 'main', url: 'https://github.com/matin235-ops/Assignment--1.git'
             }
         }
         stage('Build') {
