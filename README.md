@@ -2,7 +2,7 @@
 # qiu21kkkkkkkkooo
 # CI/CD Pipeline Project
 
-This project demonstrates a CI/CD pipeline using Jenkins, GitHub, and Docker. The pipeline automatically detects changes pushed to a GitHub repository, triggers a Jenkins job to build and test the application, and generates and pushes a Docker image to Docker Hub.
+This project demonstrates a CI/CD pipeline using Jenkins, GitHub, and Docker. The pipeline automatically detects changes pushed to a GitHub repository, triggers a Jenkins job to build and test the application, and generates and pushes a Docker image to Docker Hub.kkkkkk
 
 ## Files
 - `app.py`: A simple Python application.
