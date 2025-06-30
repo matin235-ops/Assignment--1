@@ -66,11 +66,18 @@ pipeline {
         stage('Update Jira') {
             steps {
                 echo 'Updating Jira issue...'
-                // Add Jira integration here
                 script {
-                    // Example: Update Jira issue status
-                    // jiraComment body: "Build ${env.BUILD_NUMBER} completed successfully", 
-                    //           issueKey: "PROJ-123"
+                    try {
+                        // Add comment to Jira issue (replace SCRUM-1 with your actual issue key)
+                        jiraAddComment(
+                            idOrKey: "SCRUM-1", 
+                            comment: "Build ${env.BUILD_NUMBER} completed successfully! Docker image pushed to matinkhaled23/assignment1-app:${env.BUILD_NUMBER}"
+                        )
+                        echo 'Jira issue updated successfully!'
+                    } catch (Exception e) {
+                        echo "Failed to update Jira: ${e.getMessage()}"
+                        // Don't fail the build if Jira update fails
+                    }
                 }
             }
         }
